@@ -41,6 +41,7 @@ class MemoryUnits(Enum):
     PB = "PB"
     EB = "EB"
     ZB = "ZB"
+    BLANK = ""
 
 
 class Submitter:
@@ -236,7 +237,7 @@ if __name__ == "__main__":
 
     jobscript = sys.argv[-1]
     cluster_cmds = sys.argv[1:-1]
-    memory_units = MemoryUnits.MB
+    memory_units = MemoryUnits.BLANK
     lsf_submit = Submitter(
         jobscript=jobscript,
         memory_units=memory_units,
